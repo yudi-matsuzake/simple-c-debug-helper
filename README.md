@@ -5,15 +5,13 @@ Simple C++ Debug Helper
 
 DEBUG(msg, depth)
 
-prints a debug message if the depth little than NDEBUG macro.
+prints a debug message if the depth is little than NDEBUG macro.
 
-`msg` A string message
+`msg` string message
 
 `depth` depth level
 
-**Example**
-
-Everybody loves examples
+**Everybody loves examples**
 
 examples/main.cpp
 
@@ -57,24 +55,24 @@ int main(int argc, char* argv[]){
 
 * Compiled without any macro
 
-!["Example 0"](example/ss5.png)
+!["Example 0"](example/ss/ss5.png)
 
 * Compiled with macro NDEBUG=0
 
-!["Example 1"](example/ss0.png)
+!["Example 1"](example/ss/ss0.png)
 
 * Compiled with macro NDEBUG=1
 
-!["Example 2"](example/ss2.png)
+!["Example 2"](example/ss/ss2.png)
 
 * Compiled with macro NDEBUG=1 and DEBUG\_COLOR\_ENABLE
 
-!["Example 3"](example/ss1.png)
+!["Example 3"](example/ss/ss1.png)
 
 * Compiled with macro NDEBUG=1 and DEBUG\_PREFIX\_ENABLE
 
-!["Example 4"](examples/ss4.png)
+!["Example 4"](example/ss/ss4.png)
 
 * Compiled with macro N\_DEBUG=1 and DEBUG\_PREFIX\_ENABLE and DEBUG\_COLOR\_ENABLE
 
-!["Example 5"](examples/ss4.png)
+!["Example 5"](example/ss/ss4.png)
