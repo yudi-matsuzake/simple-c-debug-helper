@@ -35,7 +35,7 @@ This MACRO calls the debug() with the macro __PRETTY_FUNCTION__ that returns the
 */
 
 #ifdef NDEBUG
-	#define DEBUG(X, Y) if(Y <= NDEBUG) debug(__PRETTY_FUNCTION__, TO_STRING(X))
+	#define DEBUG(X, Y) if(Y <= NDEBUG) debug(__PRETTY_FUNCTION__, TO_STRING(X), Y)
 #else
 	/*if the MACRO DEBUG isn't defined the DEBUG(X) MACRO
 	  will not produce any code*/
@@ -44,6 +44,12 @@ This MACRO calls the debug() with the macro __PRETTY_FUNCTION__ that returns the
 
 /*	FUNCTIONS 	*/
 
-void debug(string f, string debug_msg);
+void debug(string f, string msg, unsigned int n){
+	#ifdef DEBUG_SHOW_PREFIX
+		cout << "DEBUG:(" << n << ")";
+	#endif
+	for(int i=0; i<(n*2); i++) cout << ' ';
+	cout << f << ": " << msg << endl;
+}
 
 #endif //_DEBUG_H_
