@@ -75,4 +75,4 @@ int main(int argc, char* argv[]){
 
 * Compiled with macro N\_DEBUG=1 and DEBUG\_PREFIX\_ENABLE and DEBUG\_COLOR\_ENABLE
 
-!["Example 5"](example/ss/ss4.png)
+!["Example 5"](example/ss/ss3.png)
