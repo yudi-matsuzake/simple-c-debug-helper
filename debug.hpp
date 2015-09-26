@@ -68,7 +68,11 @@ This MACRO calls the debug() with the macro __PRETTY_FUNCTION__ that returns the
 */
 
 #ifdef NDEBUG
-	#define DEBUG(X, Y) if(Y <= NDEBUG) debug(__PRETTY_FUNCTION__, TO_STRING(X), Y)
+	#if NDEBUG < 0
+		#define DEBUG(X, Y) debug(__PRETTY_FUNCTION__, TO_STRING(X), Y)
+	#else
+		#define DEBUG(X, Y) if(Y <= NDEBUG) debug(__PRETTY_FUNCTION__, TO_STRING(X), Y)
+	#endif
 #else
 	/*if the MACRO DEBUG isn't defined the DEBUG(X) MACRO
 	  will not produce any code*/
