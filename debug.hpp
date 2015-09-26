@@ -12,7 +12,6 @@ Compile with -DDEBUG or define a DEBUG macro (#define DEBUG)
 
 using namespace std;
 
-
 /*	MACROS	*/
 /*
 MACRO FUNCTION TO_STRING (X)
@@ -35,15 +34,16 @@ msg  - debug message
 This MACRO calls the debug() with the macro __PRETTY_FUNCTION__ that returns the name of the function.
 */
 
-#ifdef DEBUG
-	#undef DEBUG
-	#define DEBUG(X) debug(__PRETTY_FUNCTION__, TO_STRING(X))
+#ifdef NDEBUG
+	#define DEBUG(X, Y) if(Y <= NDEBUG) debug(__PRETTY_FUNCTION__, TO_STRING(X))
 #else
-	#define DEBUG(X)
+	/*if the MACRO DEBUG isn't defined the DEBUG(X) MACRO
+	  will not produce any code*/
+	#define DEBUG(X, Y)
 #endif
 
 /*	FUNCTIONS 	*/
 
 void debug(string f, string debug_msg);
 
-#endif
+#endif //_DEBUG_H_

@@ -7,7 +7,7 @@ Compile with -DDEBUG or define a DEBUG macro (#define DEBUG)
 */
 
 #include <iostream>
-#include "debug.h"
+#include "debug.hpp"
 
 //After main function (desctructor of the main) (pt joke: "Te deixará maternalmente órfão")
 //void __attribute__ ((destructor))  dtor() {}

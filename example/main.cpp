@@ -8,29 +8,29 @@ Compile with -DDEBUG or define a DEBUG macro (#define DEBUG)
 */
 #include <iostream>
 #include <string>
-#include "debug.h"
+#include "debug.hpp"
 
 using namespace std;
 
 namespace functions{
 	void func(){
-		DEBUG("func{...");
+		DEBUG("func{...", 0);
 
 		for(int i=0; i<5; i++)
-			DEBUG("i = " << i);
+			DEBUG("i = " << i, 1);
 	
 
-		DEBUG("...}");
+		DEBUG("...}", 0);
 	}
 }
 
 int main(int argc, char* argv[]){
-	DEBUG("main{...");
+	DEBUG("main{...", 0);
 	
 	cout << "Hello Debug" << endl;	
 	
 	functions::func();
 
-	DEBUG("...}");
+	DEBUG("...}", 0);
 	return 0;
 }
