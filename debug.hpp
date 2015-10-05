@@ -8,7 +8,9 @@ Compile with -DDEBUG or define a DEBUG macro (#define DEBUG)
 */
 
 #ifndef _DEBUG_H_
+#define _DEBUG_H_
 #include <sstream>
+#include <iostream>
 
 using namespace std;
 
