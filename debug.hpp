@@ -83,7 +83,7 @@ This MACRO calls the debug() with the macro __PRETTY_FUNCTION__ that returns the
 
 /*	FUNCTIONS 	*/
 
-void debug(string f, string msg, unsigned int n){
+void inline debug(string f, string msg, unsigned int n){
 	//prefix
 	#ifdef DEBUG_PREFIX_ENABLE
 		cout << RED("DEBUG")":";
