@@ -93,7 +93,7 @@ void inline debug(string f, string msg, unsigned int n){
 	cout << "(" << YELLOW(n) << ")";
 
 	//indent
-	for(int i=0; i<(n*2); i++) cout << ' ';
+	for(unsigned int i=0; i<(n*2); i++) cout << ' ';
 
 	//function name and message
 	cout << BLUE(f) << ": " << GRAY(msg) << endl;
